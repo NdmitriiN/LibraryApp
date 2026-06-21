@@ -29,9 +29,9 @@ public partial class LoansForm : Form
 
         SuspendLayout();
 
-        dgv.Dock = DockStyle.Top;
         dgv.Location = new Point(0, 50);
         dgv.Size = new Size(980, 340);
+        dgv.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right | AnchorStyles.Bottom;
         dgv.ReadOnly = true;
         dgv.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
         dgv.Columns.AddRange(

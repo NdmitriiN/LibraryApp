@@ -33,10 +33,10 @@ public partial class BooksForm : Form
 
         SuspendLayout();
 
-        // DataGridView
-        dgvBooks.Dock = DockStyle.Top;
-        dgvBooks.Location = new Point(0, 40);
+        // DataGridView - positioned below the top toolbar
+        dgvBooks.Location = new Point(0, 45);
         dgvBooks.Size = new Size(900, 380);
+        dgvBooks.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right | AnchorStyles.Bottom;
         dgvBooks.AllowUserToAddRows = false;
         dgvBooks.AllowUserToDeleteRows = false;
         dgvBooks.ReadOnly = true;
@@ -52,7 +52,7 @@ public partial class BooksForm : Form
             new DataGridViewTextBoxColumn { Name = "Available", HeaderText = "Доступно", Width = 80 }
         );
 
-        // Search
+        // Search (top toolbar area)
         txtSearch.Location = new Point(12, 12);
         txtSearch.Size = new Size(300, 23);
         txtSearch.PlaceholderText = "Поиск по названию или автору...";

@@ -27,9 +27,9 @@ public partial class ReadersForm : Form
 
         SuspendLayout();
 
-        dgv.Dock = DockStyle.Top;
         dgv.Location = new Point(0, 45);
         dgv.Size = new Size(850, 360);
+        dgv.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right | AnchorStyles.Bottom;
         dgv.ReadOnly = true;
         dgv.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
         dgv.Columns.AddRange(
